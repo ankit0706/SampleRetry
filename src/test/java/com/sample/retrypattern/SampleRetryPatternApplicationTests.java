@@ -1,0 +1,13 @@
+package com.sample.retrypattern;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SampleRetryPatternApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
