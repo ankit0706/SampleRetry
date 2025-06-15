@@ -67,7 +67,9 @@ public String getMessageAfterMaxAttempts(RuntimeException e) {
 }
 
 In which cases retry won’t be triggered?
+
 Retry won’t be triggered if there is internal calling of method. It means if the retryable method is called from the same class in which it exists, retry mechanism won’t come into action. So, the retryable method and its calling method must exist in separate classes.
+
 Retry mechanism doesn’t work with JUnit tests so we can skip trying the same.
 
 More information can be found here https://github.com/spring-projects/spring-retry
