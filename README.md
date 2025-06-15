@@ -19,6 +19,7 @@ Step 1: Add the following dependencies to your pom.xml
         <groupId>org.springframework</groupId>
         <artifactId>spring-aspects</artifactId>
     </dependency>
+    
 Step 2: Take any configuration class in your code and annotate it with Enable retry
 
 import org.springframework.context.annotation.Configuration;
@@ -46,6 +47,7 @@ public String downloadAndSendData(String countryName) throws RuntimeException {
     }
 
 }
+
 Here, we return some hard coded values for simplicity, but we can assume that to get the values we hit another microservice which may fail.
 
 Now, the method has retryFor = RuntimeException.class and the same exception is being thrown by the method. This is very important as retry won’t be triggered if the exception is caught and handled by the method and not thrown.
